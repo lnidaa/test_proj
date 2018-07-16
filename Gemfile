@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
 ruby '2.5.1'
 
@@ -60,8 +60,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap-sass',       '3.2.0.0'
+gem 'bootstrap-sass', '3.2.0.0'
 gem 'mysql2'
-gem 'bcrypt',               '3.1.7'
+gem 'bcrypt', '3.1.7'
 gem 'jquery-rails'
 gem 'rails-ujs'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'

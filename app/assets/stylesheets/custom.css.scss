@@ -2,8 +2,14 @@
 @import "bootstrap";
 
 /* typography */
+
 body {
   padding-top: 100px;
+  background-image: url("main.jpg");
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
 }
 
 section {
@@ -39,19 +45,20 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: red;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+  box-sizing: border-box;
 }
 
 /* miscellaneous */
@@ -94,6 +101,7 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
 /* sidebar */
 
 aside {
@@ -130,6 +138,7 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -142,6 +151,7 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
 /* forms */
 
 #error_explanation {
@@ -157,4 +167,32 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.navbar-inverse {
+  color: #12234b;
 }
