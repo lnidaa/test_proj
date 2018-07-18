@@ -196,3 +196,94 @@ input {
 .navbar-inverse {
   color: #12234b;
 }
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup {
+  background-color: #A901DB;
+  border: 0;
+  font-family: "Comic Sans MS";
+}
+
+.jumbotron {
+  background-color: transparent;
+  font-family: "Comic Sans MS";
+  color: #610B5E;
+
+}
+
+.head {
+  background-color: #610B5E;
+  border: 0;
+  font-family: "Comic Sans MS";
+
+}
+
+.microposts {
+  font-family: "Comic Sans MS";
+  font-size: 20px;
+}
