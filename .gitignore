@@ -28,3 +28,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.idea/
+
+# Игнорирование загруженных тестовых изображений.
+/public/uploads
