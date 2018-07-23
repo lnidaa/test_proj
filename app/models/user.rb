@@ -11,7 +11,21 @@ class User < ApplicationRecord
 
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
-
+  has_attached_file :cover,
+                    styles: {
+                        thumb: ["200x400#", :jpeg],
+                        original: [:jpeg]
+                    },
+                     storage: :s3,
+                  s3_credentials: {
+                      access_key_id: ENV["S3_KEY"],
+                      secret_access_key: ENV["S3_SECRET"],
+                      bucket: ENV["S3_BUCKET"]
+                  },
+                  s3_region: ENV["S3_REGION"]
+  validates_attachment :cover,
+                       content_type: {content_type: /\Aimage\/.*\z/},
+                       size: {less_than: 1.megabyte}
   attr_accessor :remember_token, :activation_token, :reset_token
   mount_uploader :avatar, AvatarUploader
   before_save :downcase_email

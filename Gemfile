@@ -60,6 +60,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'mysql2'
 gem 'bcrypt', '3.1.7'
@@ -71,3 +72,5 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave', '0.10.0'
 gem 'mini_magick', '3.8.0'
 gem 'fog', '1.36.0'
+gem "paperclip"
+gem 'aws-sdk'

@@ -21,6 +21,9 @@
       <%= f.label :avatar %>
       <%= f.file_field :avatar %>
       <%= image_tag @user.avatar.url if @user.avatar? %>
+      <%= f.label :cover %>
+      <%= f.file_field :cover %>
+      <%= image_tag @user.cover.url if @user.cover? %>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
