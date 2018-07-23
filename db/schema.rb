@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2018_07_23_084228) do
     t.string "reset_digest"
     t.datetime "reset_sent_at"
     t.string "avatar"
-    t.string "cover"
     t.string "cover_file_name"
     t.string "cover_content_type"
     t.integer "cover_file_size"

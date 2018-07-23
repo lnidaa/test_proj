@@ -16,13 +16,13 @@ class User < ApplicationRecord
                         thumb: ["200x400#", :jpeg],
                         original: [:jpeg]
                     },
-                     storage: :s3,
-                  s3_credentials: {
-                      access_key_id: ENV["S3_KEY"],
-                      secret_access_key: ENV["S3_SECRET"],
-                      bucket: ENV["S3_BUCKET"]
-                  },
-                  s3_region: ENV["S3_REGION"]
+                    storage: :s3,
+                    s3_credentials: {
+                        access_key_id: ENV["S3_KEY"],
+                        secret_access_key: ENV["S3_SECRET"],
+                        bucket: ENV["S3_BUCKET"]
+                    },
+                    s3_region: ENV["S3_REGION"]
   validates_attachment :cover,
                        content_type: {content_type: /\Aimage\/.*\z/},
                        size: {less_than: 1.megabyte}
