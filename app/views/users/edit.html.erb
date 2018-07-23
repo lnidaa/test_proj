@@ -18,6 +18,9 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+      <%= image_tag @user.avatar.url if @user.avatar? %>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
@@ -25,5 +28,6 @@
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank">change</a>
     </div>
+
   </div>
 </div>
