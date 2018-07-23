@@ -1,3 +1,6 @@
+<% if current_user.cover.exists? %>
+  <%= image_tag current_user.cover.url(:thumb, timestamp: false) %>
+<% end %>
 <% if @feed_items.any? %>
   <ol class="microposts">
     <%= render @feed_items %>
